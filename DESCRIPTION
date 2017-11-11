@@ -1,14 +1,11 @@
 Package: SETHRO
 Title: Simple Enrichment Testing for Highly Redundant Ontologies
-Version: 0.0.0.9000
+Version: 0.0.0.1
 Authors@R: person("Robert", "Sehlke", email = "rogepese@gmail.com", role = c("aut", "cre"))
 Description: Gene set enrichment and subsequent clustering of similar sets.
 Depends: R (>= 3.4.1)
-License: What license is it under?
+License: GPLv3
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.0.1
-Imports:
-cluster,
-AnnotationDbi,
-Matrix
+Imports: cluster, AnnotationDbi, Matrix
