@@ -239,6 +239,10 @@ clusteredEnrichmentGO = function( gomatrix,
   
   if (sort_by_pval) { gm = gm[order(gm$Fisher),]}
   
+  # lists of genes in data frames create some issues downstream, so let's paste them
+  gm$Genes = sapply(gm$Genes, paste0, collapse=", ")
+  gm$Genes.in.secondary = sapply(gm$Genes.in.secondary, paste0, collapse=", ")
+  
   return( list("results"=gm, "background"=universe, "geneset"=geneset, "gomatrix"=gomatrix, "dists"=godist,
                "clustering"=goclust, "partition"=gopartition, "cut_at"=cut_max + 0.5, "silhouette_index"=sindex ) )
 }
